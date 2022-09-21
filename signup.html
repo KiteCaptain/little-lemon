@@ -5,38 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little lemon | signup</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
     <nav>
     </nav>     
     
-    <main>
+    <main class="container">
         <h1>Sign Up</h1>
-        <form action="" method="POST">
+        <form class="form-control" action="" method="POST">
             <div>
                 <label for="user-first-name">First Name</label>
-                <input type="text" id="user-first-name" name="user-first-name" />
+                <input type="text" id="user-first-name" name="user-first-name" required />
             </div>
             <div>
                 <label for="user-last-name">Last Name</label>
-                <input type="text" id="user-last-name" name="user-last-name" />
+                <input type="text" id="user-last-name" name="user-last-name" required/>
             </div>
             <div>
                 <label for="user-eamil">Email</label>
-                <input type="email" id="user-email" name="user-email" />
+                <input type="email" id="user-email" name="user-email" required/>
             </div>
             <div>
                 <label for="user-password">Pasword</label>
-                <input type="password" id="user-password" name="user-password" />
+                <input type="password" id="user-password" name="user-password" minlength="4" maxlength="15" required/>
             </div>
             <div>
-                <label for="user-confirm-password">Confirm Password</label>
-                <input type="password" id="user-confirm-password" name="user-confirm-password" />
+                <label for="user-confirm-password">Confirm   Password</label>
+                <input type="password" id="user-confirm-password" name="user-confirm-password" minlength="4" maxlength="15" required/>
             </div>
             <div>
                 <button type="submit">Sign Up</button>
             </div>
         </form>
+        <style>
+            input:focus:invalid {
+                box-shadow: 0 0 0 2px rgb(171, 51, 51);
+            }
+        </style>
+
     </main>
 
     <footer>
