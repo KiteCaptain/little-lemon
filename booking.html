@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Booking Table</h1>
-    <form action="" method="POST">
+    <!-- ===== SIMPLE BOOKING===== -->
+    <!-- <form action="" method="POST">
         <fieldset id="size">
             <label></label>
                 <input type="radio" value="2" name="size"> 2-person table
@@ -31,6 +32,37 @@
             
         </fieldset> 
         <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- ===== ADVANCED BOOKING ===== -->
+    <form class="form-control container" method="POST">
+        <div class="input-group">
+            <label for="booking-date">Booking Date:  </label>
+            <input type="date" id="booking-date" name="booking-date">
+        </div>
+        <div class="input-group">
+            <label for="people">Number of people: </label>
+            <input type="range" id="people" name="people" min="1" max="10" value="4" oninput="this.nextElementSibling.value=this.value">
+            <output>4</output>
+        </div>
+        <div>
+            <label for="booking-location"></label>
+            <input id="booking-location" name="booking-location" list="locations">
+            <datalist id="locations">
+                <option value="uptown"></option>
+                <option value="downtown"></option>
+                <option value="calif"></option>
+                <option value="kite"></option>
+                <option value="eugine"></option>
+                <option value="what"></option>
+                <option value="amidoing"></option>
+                <option value="withlife"></option>
+
+            </datalist>
+        </div>
+        <div>
+            <button type="submit">Book Table</button>
+        </div>
     </form>
 </body>
 </html>
